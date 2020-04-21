@@ -1,0 +1,15 @@
+logs:
+  level: debug
+  encode: json
+  levelPort: 5053
+  levelPattern: /handle/level
+  output: file,console
+  file:
+    path: .././../logs/{hostname}/{port}/111/foo.log
+    maxSize: 10
+    maxBackups: 10
+    maxAge: 28
+    encode: console
+  initFields:
+    company: wayz
+    app: yourapp
